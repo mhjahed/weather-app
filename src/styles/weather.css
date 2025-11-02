@@ -1,0 +1,120 @@
+/* Dynamic Backgrounds */
+.bg-sunny {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(to bottom, #87CEEB 0%, #E0F6FF 100%);
+}
+
+.bg-cloudy {
+  background: linear-gradient(to bottom, #bdc3c7 0%, #2c3e50 100%);
+}
+
+.bg-rainy {
+  background: linear-gradient(to bottom, #373B44 0%, #4286f4 100%);
+}
+
+.bg-stormy {
+  background: linear-gradient(to bottom, #2C3E50 0%, #000000 100%);
+}
+
+.bg-snowy {
+  background: linear-gradient(to bottom, #E6DADA 0%, #274046 100%);
+}
+
+.bg-night {
+  background: linear-gradient(to bottom, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+
+.bg-foggy {
+  background: linear-gradient(to bottom, #a8b8c0 0%, #e3e3e3 100%);
+}
+
+.bg-default {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Weather Card Animations */
+.weather-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  transition: transform 0.3s ease;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  transition: background 0.5s ease;
+  padding: 2rem 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Loader */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #0d6efd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem 0;
+  }
+  
+  .weather-icon {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+/* PWA Install Button */
+.install-prompt {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* Pulse animation for voice search */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
